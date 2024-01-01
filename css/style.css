@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    transition-duration: 0.2s;
+    font-family: cursive, Arial, sans-serif;
+}
+
+:root {
+    --bg-color: #191c29;
+    --main-color: #58c7fa;
+    --sc-main-color: #3c67e3;
+    --danger: #dc3545;
+    --text-color: #FFF;
+    --b-radius: 7px;
+    --gradient-130deg: linear-gradient(130deg, var(--main-color), var(--sc-main-color), #4e00c2);
+    --gradient-30deg: linear-gradient(30deg, var(--main-color), var(--sc-main-color), #4e00c2);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.m-t-1 {
+    margin-top: 1rem;
+}

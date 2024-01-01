@@ -1,0 +1,52 @@
+.text-stroke {
+    width: fit-content;
+    margin: 0 auto 25px;
+
+    -webkit-text-stroke: 1px var(--main-color);
+    color: transparent;
+
+    font-size: 6rem;
+
+    position: relative;
+}
+
+.text-stroke::before {
+    content: attr(data-p-content);
+    position: absolute;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    color: var(--main-color);
+    border-right: 2px solid var(--main-color);
+
+    animation: animate-x 2s linear infinite;
+}
+
+@keyframes animate-x {
+    0% {
+        width: 0;
+    }
+    70%, 100% {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    .text-stroke {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 473px) {
+    .text-stroke {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 337px) {
+    .text-stroke {
+        font-size: 2rem;
+    }
+}

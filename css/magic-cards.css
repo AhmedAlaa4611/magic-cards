@@ -1,0 +1,80 @@
+body {
+    background-color: var(--bg-color);
+    margin: 3rem 0;
+}
+
+.cards-container {
+    width: 85%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 330px;
+    height: 405px;
+    margin: 25px;
+
+    border-radius: var(--b-radius);
+    background-color: var(--bg-color);
+    text-align: center;
+
+    font-size: 2.5rem;
+    /* color: transparent; */
+    color: var(--main-color);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    border-radius: inherit;
+}
+
+.card p {
+    text-transform: capitalize;
+    margin: 0.5rem;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -1%;
+    left: -2%;
+
+    width: 104%;
+    height: 102%;
+
+    border-radius: inherit;
+    background-image: var(--gradient-130deg);
+    z-index: -1;
+}
+
+/* .card:hover {
+    color: var(--main-color);
+} */
+
+.card:hover::before {
+    background-image: var(--gradient-30deg);
+}
+
+/* .card-background {
+    background:
+    linear-gradient(63deg, #999 23%, transparent 23%) 7px 0,
+    linear-gradient(63deg, transparent 74%, #999 78%),
+    linear-gradient(63deg, transparent 34%, #999 38%, var(--bg-color) 58%, transparent 62%),
+    var(--bg-color);
+    background-size: 16px 48px;
+} */
+
+/* 
+background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+*/
